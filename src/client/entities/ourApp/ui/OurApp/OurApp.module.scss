@@ -1,0 +1,17 @@
+.phoneIconWrapper {
+  position: relative;
+
+  width: 618px;
+}
+
+.content {
+  z-index: 1;
+}
+
+.phoneIcon {
+  position: absolute;
+  z-index: 0;
+  right: -41px;
+  bottom: -41px;
+  width: 700px;
+}

@@ -1,0 +1,29 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  margin: 0 auto;
+
+  & > *:not(:first-child) {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.whiteBackground {
+  background-color: var(--color-L100);
+}
+
+.wrapper .raffleBannerWrapper {
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.wrapper .sendNotificationBannerWrapper {
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 32px;
+  }
+}

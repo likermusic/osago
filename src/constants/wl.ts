@@ -1,0 +1,22 @@
+export const WL_QUERY_PARAMS = {
+  affSub1: 'aff_sub',
+  affSub2: 'aff_sub2',
+  affSub3: 'aff_sub3',
+  affSub4: 'aff_sub4',
+  affSub5: 'aff_sub5',
+  autoNumber1: 'plateNumber',
+  autoNumber2: 'platenumber',
+  egarant: 'egarant',
+  layout: 'layout',
+  nonPartnerWl: 'nonPartnerWl',
+  offerId: 'offer_id',
+  partnerId: 'aff_id', // id партнёра в WL
+  paymentLinkInCurrentTab: 'pay_current_tab',
+  result: 'result',
+  success: 'success',
+  showContacts: 'showContacts',
+  source: 'source',
+  themePalette: 'themePalette',
+  transactionId: 'transaction_id',
+  isQuestionnaireOnLanding: 'isquestionnaireonlanding',
+};

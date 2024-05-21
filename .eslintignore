@@ -1,0 +1,8 @@
+build/*
+node_modules/*
+.next/*
+next-env.d.ts
+config/*
+*.config.js
+src/generatedDTO
+.storybook

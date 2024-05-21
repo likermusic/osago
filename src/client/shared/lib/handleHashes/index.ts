@@ -1,0 +1,1 @@
+export { handleHashes } from './handleHashes';

@@ -1,0 +1,1 @@
+export { useSendEventForwardingProposition } from './useSendEventForwardingProposition';

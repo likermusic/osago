@@ -1,0 +1,24 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.stepsWrapper {
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding: 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-top: 0;
+  }
+}
+
+.inviteFriend {
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.iconColor {
+  stroke: var(--color-B100);
+}

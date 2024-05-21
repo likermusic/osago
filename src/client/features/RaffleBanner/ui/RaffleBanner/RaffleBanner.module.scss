@@ -1,0 +1,70 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  margin-bottom: 64px;
+  background-color: var(--color-B100);
+  color: var(--color-L100);
+  white-space: normal;
+  cursor: pointer;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 24px;
+    background-image: url('../../assets/WinBackground3.png');
+    background-repeat: no-repeat;
+    background-position: bottom -10px right 45px;
+    white-space: nowrap;
+  }
+}
+
+.imageWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @media screen and (min-width: $breakpoint-tablet) {
+    right: 16px;
+    bottom: 55px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    position: static;
+    margin: -125px 0;
+  }
+}
+
+.imagePosition {
+  position: absolute;
+  right: 0;
+  @media screen and (min-width: $breakpoint-tablet) {
+    right: 16px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    position: static;
+    margin: -125px 0;
+  }
+}
+
+// Cusotm styles for OTP
+.wrapperOtp {
+  margin-bottom: 64px;
+  background-color: #d6fb7e;
+  background-image: none;
+  color: #000;
+  white-space: normal;
+  cursor: pointer;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+
+.imagePositionOtp {
+  position: absolute;
+  right: 0;
+  bottom: 23px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    right: 16px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    position: static;
+    margin: -125px 0;
+  }
+}

@@ -1,0 +1,10 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.btn {
+  width: 100%;
+  margin-left: auto;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 200px;
+  }
+}

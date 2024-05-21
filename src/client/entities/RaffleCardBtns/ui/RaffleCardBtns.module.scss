@@ -1,0 +1,13 @@
+.wrapper {
+  z-index: 1;
+}
+
+.btn {
+  width: 100%;
+  max-width: 314px;
+}
+
+// Тк кнопка синяя в темном цвете и фон тоже синий она сливается. Поэтому нужна белый цвет на темной теме
+html[data-theme='guinness'] .btnRight {
+  --color-B300: var(--color-D100);
+}

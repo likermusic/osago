@@ -1,0 +1,14 @@
+.stickyControlContent {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.stickyControl {
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-L100);
+}

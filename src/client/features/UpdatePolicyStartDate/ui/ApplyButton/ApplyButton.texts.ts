@@ -1,0 +1,1 @@
+export const ApplyButtonText = 'Применить';

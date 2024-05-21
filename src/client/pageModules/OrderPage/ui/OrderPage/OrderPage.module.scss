@@ -1,0 +1,27 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.pageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.contentWrapper {
+  padding: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0;
+    padding-top: 16px;
+  }
+}
+
+.afterPayment {
+  flex-direction: column;
+  margin-top: 12px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-top: 32px;
+  }
+}

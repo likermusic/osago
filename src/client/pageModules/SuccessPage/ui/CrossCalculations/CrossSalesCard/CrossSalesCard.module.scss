@@ -1,0 +1,39 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.cardWrapper {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 24px;
+  }
+}
+
+.cardFooter {
+  position: relative;
+  margin-top: auto;
+}
+
+.cardButton {
+  min-width: 184px;
+
+  &:disabled span {
+    color: var(--color-D20);
+  }
+}
+
+.infoIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  width: auto;
+  margin: 0 -16px 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 0 -24px 16px;
+  }
+}

@@ -1,0 +1,11 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+  }
+}

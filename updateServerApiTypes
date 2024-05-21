@@ -1,0 +1,39 @@
+# Генерируем типы по сервисам
+#APIGATEWAY
+openapi-typescript https://apigateway.svc.platform.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/apigateway.ts
+
+#AUTO
+openapi-typescript https://auto.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/auto.ts
+
+#COOKIES
+openapi-typescript https://cookies.svc.platform.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/cookies.ts
+
+#DADATA
+openapi-typescript https://dadata.svc.platform.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/dadata.ts
+
+#GATEWAY
+openapi-typescript https://gateway.svc.platform.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/gateway.ts
+
+#INSURANCECOMPANIES
+openapi-typescript https://insurancecompanies.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/insurancecompanies.ts
+
+#OSAGO_STAFF
+openapi-typescript https://osago-staff.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/osago-staff.ts
+
+#OSAGOGATEWAY
+openapi-typescript https://osagogateway.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/osago-gateway.ts
+
+#OSAGOGATEWAY v2
+openapi-typescript https://osagogateway.svc.osago.dev.lan/swagger/2.0/swagger.yaml --output src/generatedDTO/osago-gateway-v2.ts
+
+#LOCATIONS
+openapi-typescript https://locations.svc.platform.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/locations.ts
+
+#OSAGO
+openapi-typescript https://osago.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/osago.ts
+
+#QUICKPRICE
+openapi-typescript https://quickprice.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/quickprice.ts
+
+#PROMO
+openapi-typescript https://osagopromo.svc.osago.dev.lan/swagger/1.0/swagger.yaml --output src/generatedDTO/promo.ts

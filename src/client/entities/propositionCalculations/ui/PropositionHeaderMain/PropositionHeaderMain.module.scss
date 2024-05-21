@@ -1,0 +1,33 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.companyText {
+  display: block;
+  max-width: 35vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 184px !important;
+    max-width: initial;
+  }
+}
+
+.rightContainer {
+  flex-shrink: 0;
+  //TODO: убрать импотент после https://sravni-corp.atlassian.net/browse/OS-7036
+  width: max-content !important;
+
+  margin-left: auto;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex: initial;
+  }
+}
+
+.advantages {
+  flex: none;
+  width: max-content;
+}
+
+.priceWithHeader {
+  width: max-content;
+}

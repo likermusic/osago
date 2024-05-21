@@ -1,0 +1,22 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  max-width: 764px;
+}
+
+.textItemWrapper {
+  align-items: center;
+}
+
+.textItem {
+  align-self: center;
+}
+
+.header {
+  white-space: pre-wrap;
+}
+
+// Custom styles for OTP Raffle Banner
+.wrapperOtp {
+  background-color: #f9fafb;
+}

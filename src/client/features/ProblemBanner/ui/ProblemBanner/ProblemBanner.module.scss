@@ -1,0 +1,35 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  border: 1px solid var(--color-R100);
+  border-radius: 20px;
+  background-color: var(--color-R06);
+}
+
+.title {
+  margin-bottom: 6px;
+  color: var(--color-R100);
+}
+
+.message {
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 6px;
+    white-space: pre-wrap;
+  }
+}
+
+.img {
+  margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    min-width: 160px;
+  }
+}
+
+.button {
+  min-width: 120px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 230px;
+  }
+}

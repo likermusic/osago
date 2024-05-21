@@ -1,0 +1,6 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.companyName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

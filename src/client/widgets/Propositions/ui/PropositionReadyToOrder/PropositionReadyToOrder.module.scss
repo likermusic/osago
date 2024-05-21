@@ -1,0 +1,8 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+@import '../constants.scss';
+
+@include payFeature;
+
+.payBtnDetail {
+  width: 199px;
+}

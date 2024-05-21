@@ -1,0 +1,17 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.input {
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 413px;
+  }
+}
+
+.btnLeft {
+  min-width: 129px;
+}
+
+.btnRight {
+  min-width: 229px;
+}

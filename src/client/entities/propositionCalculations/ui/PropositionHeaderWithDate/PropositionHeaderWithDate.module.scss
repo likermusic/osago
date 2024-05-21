@@ -1,0 +1,18 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.rightContainer {
+  flex-shrink: 0;
+  //TODO: убрать импотента после https://sravni-corp.atlassian.net/browse/OS-7036
+  width: max-content !important;
+
+  margin-left: auto;
+  text-align: right;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex: initial;
+  }
+}
+
+.startDate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

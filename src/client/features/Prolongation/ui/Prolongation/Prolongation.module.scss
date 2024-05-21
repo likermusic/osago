@@ -1,0 +1,33 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-D06);
+  gap: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  margin-right: 16px;
+  overflow: auto;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.badgesBlock {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 0;
+  }
+}

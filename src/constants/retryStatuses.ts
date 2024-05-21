@@ -1,0 +1,2 @@
+export const RETRY_AUTH_STATUSES = [401];
+export const NO_RETRY_STATUSES = [301, 304, 400, 401, 404, 403, 409, 410, 418, 429];

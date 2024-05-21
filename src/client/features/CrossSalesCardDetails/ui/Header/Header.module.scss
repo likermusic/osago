@@ -1,0 +1,13 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  padding: 0 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0 24px;
+  }
+}
+
+.closeButton {
+  padding: 0;
+  transform: translateX(12px);
+}

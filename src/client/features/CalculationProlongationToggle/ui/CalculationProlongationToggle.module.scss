@@ -1,0 +1,24 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.toggleWidth {
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: 360px;
+  }
+}
+
+.prolongationsBadge {
+  button:nth-child(2) {
+    &::after {
+      content: '!';
+      width: 20px;
+      height: 20px;
+      margin-left: 2px;
+      padding: 2px 4px;
+      border-radius: 50%;
+      background-color: var(--color-O100);
+      color: var(--color-L100);
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

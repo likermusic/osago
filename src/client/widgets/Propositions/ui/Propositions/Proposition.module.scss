@@ -1,0 +1,23 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.error {
+  margin-top: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-top: 32px;
+  }
+}
+
+.progressBarWrapper {
+  position: sticky;
+  bottom: 16px;
+  left: 0;
+
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    right: 0;
+    left: 0;
+  }
+}

@@ -1,0 +1,22 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.timeToEndAlert {
+  display: flex;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  background-color: var(--color-O100);
+  color: var(--color-L100);
+  text-align: center;
+  white-space: pre-line;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 24px;
+    white-space: initial;
+  }
+}

@@ -1,0 +1,91 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: initial;
+    overflow: visible;
+  }
+}
+
+.content {
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 65%;
+  }
+}
+
+.copyInput {
+  position: relative;
+  width: 100%;
+  max-width: 311px;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & input[type='url'] {
+    color: var(--color-B100);
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 288px;
+  }
+}
+
+.shareButton {
+  width: 100%;
+  max-width: 311px;
+  height: 60px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 60px;
+  }
+}
+
+.copyWrapper {
+  position: relative;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: start;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  right: 75px;
+  bottom: -64px;
+}
+
+.inviteImg {
+  position: relative;
+  bottom: -26px;
+  left: 0;
+  width: 200px;
+  height: 96px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    position: static;
+    width: auto;
+    height: auto;
+    margin-top: 24px;
+  }
+}

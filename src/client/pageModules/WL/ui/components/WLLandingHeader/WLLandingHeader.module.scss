@@ -1,0 +1,57 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.car {
+  position: absolute;
+  right: -190px;
+  bottom: 0;
+  color: var(--color-Main100);
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: translateY(0);
+  }
+}
+
+.textContainer {
+  min-height: 140px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    min-height: initial;
+  }
+}
+
+.title {
+  margin-right: 50px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-right: 0;
+  }
+}
+
+.text {
+  margin-right: 130px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-right: 0;
+  }
+}
+
+.carWrapper {
+  position: relative;
+  width: 335px;
+  height: 180px;
+}
+
+.svgCar {
+  position: absolute;
+
+  z-index: var(--z-index-first);
+  top: 0;
+  right: 0;
+}
+
+.pngCar {
+  // сафари не реагирует на z-index если указать только position: relative;
+  display: flex;
+  position: relative;
+  z-index: var(--z-index-second);
+}

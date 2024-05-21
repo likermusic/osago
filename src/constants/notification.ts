@@ -1,0 +1,1 @@
+export const BASE_NOTIFICATION_TIMEOUT = 15000;

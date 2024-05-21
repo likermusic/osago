@@ -1,0 +1,1 @@
+export { generateOldOsagoUrl } from './generateOldOsagoUrl';

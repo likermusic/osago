@@ -1,0 +1,1 @@
+export { restoreRedirectToPropositionPage } from './restoreRedirectToPropositionPage';

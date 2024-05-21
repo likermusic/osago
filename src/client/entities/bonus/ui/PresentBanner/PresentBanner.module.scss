@@ -1,0 +1,13 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  background-color: var(--color-V100);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 40px;
+  }
+}
+
+.img {
+  align-self: end;
+}

@@ -1,0 +1,4 @@
+export const PASSPORT_NUMBER_LENGTH = 4;
+export const PASSPORT_SERIES_LENGTH = 6;
+export const DRIVER_LICENSE_NUMBER_LENGTH = 4;
+export const DRIVER_LICENSE_SERIES_LENGTH = 6;

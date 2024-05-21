@@ -1,0 +1,62 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.landingWrapper {
+  gap: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 64px;
+  }
+}
+
+.carWithDriverWrapper {
+  position: relative;
+  flex: 1.5;
+  overflow: hidden;
+}
+
+.companiesLogoWrapper {
+  position: relative;
+  min-width: 270px;
+  margin: 0 auto;
+}
+
+.companiesLogo {
+  position: absolute;
+  top: -70%;
+  right: 0;
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+.rightContainer {
+  flex: 1;
+}
+
+.img {
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  object-fit: cover;
+}
+
+.imgWl {
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.picture {
+  z-index: 2;
+  margin: 0 auto 40px;
+}
+
+.rightOption {
+  @media screen and (min-width: $breakpoint-desktop) {
+    min-width: 364px;
+  }
+}
+
+.noComission {
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 40px;
+  }
+}

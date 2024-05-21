@@ -1,0 +1,9 @@
+.carousel {
+  & > div {
+    margin-bottom: 0; //disable margin under controls
+
+    & > div {
+      gap: 16px !important;
+    }
+  }
+}

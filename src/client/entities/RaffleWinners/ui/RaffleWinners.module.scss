@@ -1,0 +1,37 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 473px;
+  background-color: var(--color-B100);
+  background-image: url('../assets/cupRight.png'), url('../assets/confettiLeft.png');
+  background-repeat: no-repeat;
+  background-position: bottom -1px right -180px, bottom 92px right 64px;
+  background-size: 459px 300px, 203px 194px;
+  gap: 20px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    min-height: 344px;
+    padding: 76px 224px;
+    gap: 24px;
+    border-radius: 40px;
+    background-image: url('../assets/cupRight.png'), url('../assets/confettiLeft.png'), url('../assets/cupLeft.png'),
+      url('../assets/conffetiRight.png');
+    background-position: bottom 0 left 20px, bottom 63px left 18px, bottom 0 right 20px, bottom 104px right 22px;
+    background-size: 322px 232px, 142px 200px, 284px 206px, 157px 144px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.wrapper {
+  padding: 32px 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 48px 0;
+  }
+}

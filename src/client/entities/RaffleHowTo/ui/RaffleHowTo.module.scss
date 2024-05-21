@@ -1,0 +1,33 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  padding: 20px 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 48px 0;
+  }
+}
+
+.card {
+  width: 100%;
+  min-width: 343px;
+  min-height: 112px;
+  gap: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+    min-width: 623px;
+    min-height: 92px;
+    gap: 24px;
+  }
+}
+
+.avatar {
+  background-color: var(--color-L100);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

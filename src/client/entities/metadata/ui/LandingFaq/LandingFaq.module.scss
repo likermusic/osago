@@ -1,0 +1,17 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin: 0;
+    padding: 32px;
+  }
+}
+
+.accordionWrapper {
+  padding: 4px 0;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 24px 0;
+  }
+}

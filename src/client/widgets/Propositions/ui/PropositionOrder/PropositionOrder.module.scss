@@ -1,0 +1,10 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+$buttonWidth: 220px;
+
+.retryErrorBtn {
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: $buttonWidth;
+    margin-left: auto;
+  }
+}

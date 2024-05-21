@@ -1,0 +1,10 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  width: 100%;
+  padding: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 24px;
+  }
+}

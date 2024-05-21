@@ -1,0 +1,31 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.loader {
+  margin-bottom: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
+
+.price {
+  margin-right: 16px;
+  margin-left: auto;
+}
+
+.cardButton {
+  min-width: 184px;
+
+  &:disabled span {
+    color: var(--color-D20);
+  }
+}

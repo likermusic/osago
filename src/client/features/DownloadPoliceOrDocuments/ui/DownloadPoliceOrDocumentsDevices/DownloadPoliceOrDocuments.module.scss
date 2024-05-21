@@ -1,0 +1,17 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.downloadContainer {
+  padding: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 24px;
+  }
+}
+
+.spinner {
+  align-self: center;
+}
+
+.disableLink {
+  pointer-events: none;
+}

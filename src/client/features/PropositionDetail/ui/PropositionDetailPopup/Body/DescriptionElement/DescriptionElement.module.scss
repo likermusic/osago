@@ -1,0 +1,7 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.badgeContainer {
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+  }
+}

@@ -1,0 +1,10 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.controls {
+  flex-direction: column-reverse;
+  justify-content: end;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+  }
+}

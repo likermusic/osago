@@ -1,0 +1,1 @@
+export { restoreRedirectToAnketaPage } from './restoreRedirectToAnketaPage';

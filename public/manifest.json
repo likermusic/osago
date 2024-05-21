@@ -1,0 +1,22 @@
+{
+  "name": "Сравни.ру – финансовый супермаркет",
+  "short_name": "Сравни.ру",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "https://f.sravni.ru/f/images/push/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://f.sravni.ru/f/images/push/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#EBEFF1",
+  "display": "standalone",
+  "orientation": "natural",
+  "gcm_sender_id": "137480856582",
+  "gcm_user_visible_only": true
+}

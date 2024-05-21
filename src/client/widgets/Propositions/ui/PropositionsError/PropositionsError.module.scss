@@ -1,0 +1,12 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 12px;
+    flex-direction: row;
+  }
+}

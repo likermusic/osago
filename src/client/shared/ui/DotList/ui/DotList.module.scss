@@ -1,0 +1,13 @@
+.subTitleList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.subTitle {
+  &:not(:first-child)::before {
+    content: '\2022';
+    padding: 0.5em;
+    color: var(--color-D20);
+  }
+}

@@ -1,0 +1,27 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+$borderRadius: 24px;
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border-radius: $borderRadius;
+  background-color: var(--color-D10);
+  text-align: center;
+}
+
+.grayBackground {
+  background-color: var(--color-D10);
+}
+
+.whiteBackground {
+  background-color: var(--color-L100);
+}
+
+.progress {
+  min-height: 2px;
+  transition: all 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0s;
+  border-radius: $borderRadius;
+  background-color: var(--color-B100);
+}

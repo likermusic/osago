@@ -1,0 +1,13 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  gap: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 24px;
+  }
+}
+
+.pictureContainer {
+  flex: 0 0 142px;
+  height: 114px;
+}

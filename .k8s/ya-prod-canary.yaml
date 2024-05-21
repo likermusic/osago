@@ -1,0 +1,151 @@
+global:
+  vault:
+    addr: 'https://vault.yc.prod.infra.sravni.market/'
+    role: 'sravni-prod-k8s-workloads'
+    path: 'sravni-prod-k8s-workloads'
+
+app:
+  team: osago
+  probes:
+    livenessPath: '/internal/ping'
+    readinessPath: '/internal/health'
+    initialDelaySeconds: 30
+  metrics:
+    path: '/internal/metrics'
+  env: &env
+    - name: SERVICE_NAME
+      value: 'osagoinsurance-frontend'
+    - name: API_PATH
+      value: '/proxy-osagoinsurance'
+    - name: WEB_PATH
+      value: 'https://www.sravni.ru'
+    - name: PORT
+      value: '80'
+    - name: CONSUL
+      valueFrom:
+        fieldRef:
+          fieldPath: status.hostIP
+    - name: IMAGE_VERSION
+      value: '{{ .Values.global.image.tag }}'
+    - name: ENV
+      value: 'production'
+    - name: NODE_ENV
+      value: 'production'
+
+    - name: CLIENT_ID
+      value: vault:secrets/data/platform/shared/sravni/auth#client_id
+    - name: CLIENT_SCOPE
+      value: vault:secrets/data/platform/shared/sravni/auth#client_scope
+    - name: CLIENT_SECRET
+      value: vault:secrets/data/osago/osago-frontend/auth#client_secret
+    - name: ENCRYPTION_KEYS
+      value: vault:secrets/data/platform/shared/sravni/auth#encryption_keys
+
+    - name: CLIENT_ID_BFF
+      value: vault:secrets/data/osago/osago-frontend/auth#client_id_bff
+    - name: CLIENT_SECRET_BFF
+      value: vault:secrets/data/osago/osago-frontend/auth#client_secret_bff
+
+    - name: ISSUER
+      value: https://sravni.id
+    - name: APIGATEWAY
+      value: https://apigateway.svc.platform.prod-sravni.lan
+    - name: AUTO
+      value: https://auto.svc.osago.prod-sravni.lan
+    - name: COOKIES
+      value: https://cookies.svc.platform.prod-sravni.lan
+    - name: DADATA
+      value: https://dadata.svc.platform.prod-sravni.lan
+    - name: GATEWAY
+      value: https://gateway.svc.platform.prod-sravni.lan
+    - name: INSURANCECOMPANIES
+      value: https://insurancecompanies.svc.osago.prod-sravni.lan
+    - name: LOCATIONS
+      value: https://locations.svc.platform.prod-sravni.lan
+    - name: METADATA
+      value: https://metadata.svc.emergency.prod-sravni.lan
+    - name: OSAGO
+      value: https://osago.svc.osago.prod-sravni.lan
+    - name: OSAGO_STAFF
+      value: https://osago-staff.svc.osago.prod-sravni.lan
+    - name: OSAGOGATEWAY
+      value: https://osagogateway.svc.osago.prod-sravni.lan
+    - name: PROMO
+      value: https://osagopromo.svc.osago.prod-sravni.lan
+    - name: QUICKPRICE
+      value: https://quickprice.svc.osago.prod-sravni.lan
+    - name: SEOCONTENT
+      value: https://seocontent.svc.emergency.prod-sravni.lan
+    - name: AVATAR_URL_PREFIX
+      value: http://f.master.qa.sravni-team.ru/avatars/
+
+    - name: SENTRY_DSN
+      value: 'https://a942578748ff6d263b84e11afb028f39@o366349.ingest.sentry.io/4505907156811776'
+
+    - name: SALT_AUTO_INFO
+      value: vault:secrets/data/osago/osago-frontend/front-salt#salt
+
+    - name: AB_TESTING_TOKEN
+      value: OSAGOINSURANCE
+
+    - name: JAEGER_AGENT_HOST
+      valueFrom:
+        fieldRef:
+          fieldPath: status.hostIP
+    - name: JAEGER_AGENT_PORT
+      value: '6832'
+
+    - name: OSAGOGATEWAY_SERVICE_SCOPE
+      value: 'Sravni.Osago.Service osago.gateway'
+    - name: IDENTITY_SERVICE_USER_SCOPE
+      value: identity.user.r
+    - name: AUTO_SERVICE_CAR_INFO_SCOPE
+      value: auto.car_info
+    - name: AUTO_SERVICE_PARSER_INFO_SCOPE
+      value: auto.parser_info
+    - name: OSAGO_SERVICE_DC_INFO_SCOPE
+      value: osago.dc_info
+
+    - name: S3_ENDPOINT
+      value: vault:secrets/data/platform/shared/CDN#s3_endpoint
+    - name: S3_BUCKET
+      value: vault:secrets/data/platform/shared/CDN#s3_bucket
+    - name: S3_PUBLIC_PATH
+      value: vault:secrets/data/platform/shared/CDN#s3_public_path
+    - name: S3_ACCESS_KEY_ID
+      value: vault:secrets/data/platform/shared/CDN#s3_access_key_id
+    - name: S3_SECRET_ACCESS_KEY_ID
+      value: vault:secrets/data/platform/shared/CDN#s3_secret_access_key_id
+
+hooks:
+  - name: publish-to-cdn
+    command:
+      - yarn
+      - publish:static
+    deletePolicy: before-hook-creation,hook-succeeded
+    stage: pre-install,pre-upgrade
+    env: *env
+    resources:
+      cpulimits: 200m
+      cpu: 200m
+      memory: 512Mi
+
+ingresses:
+  - host: www.sravni.ru
+    ssl: enabled
+    class: 'external'
+    canary:
+      cookie: 'sravni_canary'
+    additionalAnnotations:
+      nginx.ingress.kubernetes.io/proxy-buffer-size: '32k'
+    paths:
+      - /osago/.*
+      - /proxy-osagoinsurance/.*
+      - /win-million-car
+
+replicaCount: 1
+
+resources:
+  cpu: 500m
+  cpulimits: 500m
+  memory: 256Mi

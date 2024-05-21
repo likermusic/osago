@@ -1,0 +1,24 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.switchers {
+  flex-direction: row;
+  justify-content: start;
+  font-weight: 600;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    justify-content: initial;
+    font-weight: initial;
+  }
+}
+
+.actionBtns {
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    margin-bottom: 0;
+    gap: 0;
+  }
+}

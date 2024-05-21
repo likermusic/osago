@@ -1,0 +1,17 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.whatToDoContainer {
+  padding: 16px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 16px 0;
+  }
+}
+
+.container {
+  margin-top: 16px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: 32px;
+  }
+}

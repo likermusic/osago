@@ -1,0 +1,16 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  max-width: 940px;
+}
+
+.header {
+  margin: 32px 0;
+}
+
+.esia {
+  margin: 8px 0;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 16px 0;
+  }
+}

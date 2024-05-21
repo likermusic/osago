@@ -1,0 +1,20 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.description {
+  margin-bottom: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.header {
+  margin-bottom: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 48px;
+  }
+}
+
+.dialogContent {
+  margin: 0 !important;
+  padding: 0;
+}

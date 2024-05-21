@@ -1,0 +1,25 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  min-height: 100px;
+}
+
+.companyInfo {
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-basis: 200px;
+    flex-shrink: 0;
+  }
+}
+
+.growBtn {
+  flex-grow: 1;
+}
+
+.skeleton {
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+  }
+}

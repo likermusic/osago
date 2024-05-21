@@ -1,0 +1,50 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.grayBg {
+  background-color: var(--color-D06);
+}
+
+.cardWrapper {
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  padding: 16px 16px 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0 30px;
+  }
+}
+
+.layout {
+  padding-top: 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 24px;
+  }
+}
+
+.raffleCardImg {
+  position: absolute;
+  bottom: -74px;
+  left: calc(50% - 180px);
+  width: 374px;
+  height: 150px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    bottom: -170px;
+    left: calc(50% - 390px);
+    width: 800px;
+    height: 320px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}

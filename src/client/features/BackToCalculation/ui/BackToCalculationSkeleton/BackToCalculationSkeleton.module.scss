@@ -1,0 +1,13 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.skeleton {
+  flex-basis: 196px;
+  flex-shrink: 0;
+  padding: 16px 32px;
+  border-radius: 12px;
+  background-color: var(--color-D10);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    background-color: var(--color-L100);
+  }
+}

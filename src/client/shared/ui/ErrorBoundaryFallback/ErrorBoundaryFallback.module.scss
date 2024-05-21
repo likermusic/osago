@@ -1,0 +1,27 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  max-width: 988px;
+  margin: 0 auto;
+  padding: 24px 0;
+  gap: 12px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 32px 0;
+    gap: 32px;
+  }
+}
+
+.heading {
+  padding-left: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-left: 0;
+  }
+}
+
+.grow {
+  flex-grow: 1;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex-grow: 0;
+  }
+}

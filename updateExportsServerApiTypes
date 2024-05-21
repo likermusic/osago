@@ -1,0 +1,14 @@
+# По умолчанию интерфейс называется везде одинаково "path", создаем реэкспорт с ренеймом
+echo "export type { paths as APIGATEWAY_API } from './apigateway'
+export type { paths as GATEWAY_API } from './gateway'
+export type { paths as OSAGO_STAFF_API } from './osago-staff'
+export type { paths as OSAGOGATEWAY_API, components as OSAGOGATEWAY_API_COMPONENTS_API } from './osago-gateway'
+export type { paths as OSAGOGATEWAY_V2_API, components as OSAGOGATEWAY_V2_COMPONENTS_API} from './osago-gateway-v2'
+export type { paths as DADATA_API } from './dadata'
+export type { paths as AUTO_API } from './auto'
+export type { paths as COOKIES_API } from './cookies'
+export type { paths as INSURANCECOMPANIES_API } from './insurancecompanies'
+export type { paths as LOCATIONS_API } from './locations'
+export type { paths as OSAGO_API } from './osago'
+export type { paths as PROMO_API } from './promo'
+export type { paths as QUICKPRICE_API } from './quickprice'" > src/generatedDTO/index.ts

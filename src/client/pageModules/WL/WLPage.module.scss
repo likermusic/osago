@@ -1,0 +1,105 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.shortWrapper {
+  padding: 24px 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 32px;
+  }
+}
+
+// Укороченная версия
+.headerShortWrapper {
+  position: relative;
+  margin: 16px 16px 4px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  background-color: var(--color-Main06);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 40px 0 4px;
+  }
+}
+
+.carNumberShortWrapper {
+  margin: 0 16px 16px;
+  border-radius: 0 0 20px 20px;
+  background-color: var(--color-Main06);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 0 0 32px;
+  }
+}
+
+// Полная версия
+.headerWrapper {
+  padding: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 40px;
+  }
+}
+
+.carNumberWrapper {
+  width: auto;
+  margin: 16px;
+  padding: 24px 16px;
+  border-radius: 20px;
+  background-color: var(--color-Main06);
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 100%;
+    margin: 40px auto 32px;
+    padding: 32px;
+  }
+}
+
+.carouselWrapper {
+  padding: 16px 0;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 32px 0;
+  }
+}
+
+.stepsWrapper {
+  margin: 32px auto;
+  padding: 0 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 40px auto;
+    padding: 40px 0;
+  }
+}
+
+.wrapperBottom {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 16px 60px;
+  background-color: var(--color-Main06);
+  gap: 64px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    gap: 88px;
+  }
+}
+
+// Custom styles for OTP
+.raffleBannerWrapper {
+  width: auto;
+  padding: 24px 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0;
+  }
+}
+
+.raffleHeaderShortWrapper {
+  position: relative;
+  margin: 16px 16px 4px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin: 40px 0 4px;
+  }
+}

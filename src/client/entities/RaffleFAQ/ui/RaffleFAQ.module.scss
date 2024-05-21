@@ -1,0 +1,19 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.wrapper {
+  padding: 24px 0 32px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 64px 0;
+  }
+}
+
+.img {
+  width: 296px;
+  height: 274px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 419px;
+    height: 387px;
+  }
+}

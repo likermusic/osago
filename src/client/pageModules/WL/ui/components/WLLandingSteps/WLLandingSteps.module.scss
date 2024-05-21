@@ -1,0 +1,14 @@
+.wrapper {
+  width: max-content;
+  margin: auto;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: var(--color-Main100);
+}
+
+// important чтобы победить специфичность ДС
+.iconWrapper {
+  background-color: var(--color-Main06) !important;
+}

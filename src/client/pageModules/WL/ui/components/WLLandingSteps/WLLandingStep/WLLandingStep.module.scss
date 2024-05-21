@@ -1,0 +1,19 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.cardWrapper {
+  width: auto;
+  padding: 12px 0;
+  white-space: pre-wrap;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 100%;
+    max-width: 302px;
+    padding: 0;
+  }
+}
+
+.text {
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 210px;
+  }
+}

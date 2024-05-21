@@ -1,0 +1,1 @@
+export { restoreRedirectForTriggerCommunication } from './restoreRedirectForTriggerCommunication';

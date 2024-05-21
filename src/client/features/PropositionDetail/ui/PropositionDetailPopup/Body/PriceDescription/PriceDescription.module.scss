@@ -1,0 +1,11 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.separatorMargin {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+}

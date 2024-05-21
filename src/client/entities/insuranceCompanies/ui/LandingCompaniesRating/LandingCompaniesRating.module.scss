@@ -1,0 +1,14 @@
+.wrapper {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+
+  > div {
+    width: 940px;
+    margin: 64px auto;
+  }
+
+  .showMore {
+    padding: 0;
+  }
+}

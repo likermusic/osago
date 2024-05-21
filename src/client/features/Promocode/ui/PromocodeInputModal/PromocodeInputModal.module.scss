@@ -1,0 +1,15 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.inputWrapper {
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 300px;
+  }
+}
+
+.btn {
+  border-radius: 0 12px 12px 0;
+}
+
+.input {
+  border-radius: 12px 0 0 12px;
+}

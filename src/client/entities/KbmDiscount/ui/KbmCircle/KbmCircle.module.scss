@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  width: auto;
+}
+
+.text {
+  position: absolute;
+  top: calc(50% - 18px);
+  left: 0;
+}
+
+.circle {
+  transform: rotate(135deg);
+}
+
+.emptyBar {
+  stroke-width: 5px;
+}
+
+.statusBar {
+  stroke-width: 5px;
+  stroke-linecap: round;
+}

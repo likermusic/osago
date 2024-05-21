@@ -1,0 +1,15 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+// TODO: (https://sravni-corp.atlassian.net/browse/OS-6485) У некста есть бага https://github.com/vercel/next.js/issues/25456, которая дублирует стили. Пока не могу найти как это починить
+.wrapper {
+  > div {
+    @media screen and (min-width: $breakpoint-desktop) {
+      padding-top: 64px;
+      padding-bottom: 32px;
+    }
+
+    > div:last-child {
+      flex-wrap: wrap;
+    }
+  }
+}

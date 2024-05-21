@@ -1,0 +1,1 @@
+export { removeSmsMaskSymbols } from './removeSmsMaskSymbols';

@@ -1,0 +1,58 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+$breakpoint-desktop-large: 1339px;
+
+.hint {
+  position: relative;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--color-D100);
+  color: var(--color-L100);
+}
+
+.hintCloseButton {
+  position: absolute;
+  right: 8px;
+}
+
+.isDesktop {
+  position: fixed;
+  z-index: $zindex-tooltip;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding-right: 28px;
+
+  // max-width используется чтобы top из инлайновых стилей мог переопределиться тут
+  // на min-width не переписать потому что тогда стили из компонента не будут перезаписывать
+  /* stylelint-disable-next-line media-feature-name-disallowed-list */
+  @media screen and (max-width: $breakpoint-desktop-large) {
+    top: 20px !important;
+  }
+
+  .hintCloseButton {
+    display: block;
+    @media screen and (min-width: $breakpoint-desktop-large) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-desktop-large) {
+    position: absolute;
+    left: calc(50% + 456px);
+    width: 218px;
+    margin: 0;
+
+    &.isGlobal {
+      position: fixed;
+      top: 50% !important;
+      transform: translateY(-50%);
+
+      .hintCloseButton {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.iconActive {
+  background-color: var(--color-G100) !important; // отсутствует этот оттенок зелёного в ДС
+}
+
+.icon {
+  background-color: var(--color-L100) !important; // отсутствует этот оттенок белого в ДС
+}
+
+.iconChecked {
+  padding: 4px !important; // в макетах иконка чуть больше, чем дефолтная из ДС, поэтому переписываю паддинг у иконки
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 500px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    max-width: none;
+  }
+}
+
+.centeredIcon {
+  margin: 0 auto;
+}
+
+.progressBar {
+  height: 4px;
+}

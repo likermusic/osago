@@ -1,0 +1,30 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.card {
+  position: relative;
+  flex-direction: column;
+  gap: 16px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 16px;
+  }
+}
+
+.absoluteTags {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  // на IOS появляется горизонтальный скролл, если не заданы границы этого блока
+  left: 0;
+  padding: 0 12px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0 16px;
+  }
+}
+
+.sponsor {
+  border: 1px solid var(--color-G100);
+}
+
+.active {
+  border: 1px solid var(--color-B100);
+}

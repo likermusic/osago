@@ -1,0 +1,30 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  width: 196px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &.calculation {
+    padding: 16px 12px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+  }
+}
+
+.slider {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.textContainer {
+  width: 126px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: auto;
+  }
+}

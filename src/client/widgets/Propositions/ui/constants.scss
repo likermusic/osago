@@ -1,0 +1,23 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+$policyDraftWidth: 220px;
+$actionBtnWidth: 105px;
+$detailPayFeature: 200px;
+
+@mixin payFeature {
+  .payFeature {
+    flex-grow: 1;
+    min-width: $actionBtnWidth;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      flex-basis: $policyDraftWidth;
+      flex-grow: 0;
+    }
+  }
+}
+
+@mixin detailPayFeature {
+  .detailPayFeature {
+    flex-basis: $detailPayFeature;
+  }
+}

@@ -1,0 +1,14 @@
+.secondText {
+  display: inline;
+  cursor: pointer;
+}
+
+.secondText:hover .activeText,
+.secondText:focus-visible .activeText {
+  color: var(--color-B200);
+}
+
+.activeText {
+  transition: color 0.15s;
+  color: var(--color-B100);
+}

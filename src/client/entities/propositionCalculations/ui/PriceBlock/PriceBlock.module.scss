@@ -1,0 +1,15 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.price {
+  flex-shrink: 0;
+  min-width: 85px;
+  text-align: right;
+  @media screen and (min-width: $breakpoint-tablet) {
+    flex: initial;
+    min-width: 93px;
+  }
+}
+
+.oldPrice {
+  text-decoration: line-through;
+}

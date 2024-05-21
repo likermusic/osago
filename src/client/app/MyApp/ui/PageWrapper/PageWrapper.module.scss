@@ -1,0 +1,10 @@
+// TODO: (https://sravni-corp.atlassian.net/browse/OS-6485) У некста есть бага https://github.com/vercel/next.js/issues/25456, которая дублирует стили. Пока не могу найти как это починить
+.footer {
+  footer > div:last-child > div > div > div {
+    flex-wrap: wrap;
+  }
+}
+
+.whiteWrapper {
+  background-color: var(--color-L100);
+}

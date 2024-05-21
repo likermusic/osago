@@ -1,0 +1,59 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.awardsWrapper {
+  @media screen and (min-width: $breakpoint-desktop) {
+    gap: 8px;
+  }
+}
+
+.award {
+  @media screen and (min-width: $breakpoint-desktop) {
+    flex-basis: calc(50% - 16px);
+  }
+}
+
+.awardCar {
+  background-color: var(--color-B06);
+}
+
+.awardMillion {
+  background-color: var(--color-G06);
+}
+
+.awardIphones {
+  background-color: var(--color-V06);
+}
+
+.awardCashback {
+  background-color: var(--color-B06);
+}
+
+.awardImage {
+  display: block;
+  margin: auto;
+}
+
+.subtitle {
+  color: var(--color-D60);
+}
+
+.awardImageWrapper {
+  margin: auto;
+}
+
+// Custom styles for OTP Raffle Banner
+.awardCarOtp {
+  background-color: #d6fb7e; // Или любой другой цвет
+}
+
+.awardMillionOtp {
+  background-color: #fff;
+}
+
+.awardIphonesOtp {
+  background-color: #dde7f0;
+}
+
+.awardCashbackOtp {
+  background-color: #dcd0ea;
+}

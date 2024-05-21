@@ -1,0 +1,13 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.mobileContainer {
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.mobileImg {
+  display: none;
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: inherit;
+  }
+}

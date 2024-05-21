@@ -1,0 +1,22 @@
+$card-padding: 16px;
+
+.card {
+  position: relative;
+  flex-shrink: 0;
+  justify-content: space-between;
+  width: 178px;
+  height: 168px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.logo {
+  width: auto;
+  height: 41px;
+}
+
+.subtitle {
+  width: calc(100% + $card-padding);
+  height: 32px;
+  overflow-y: auto;
+}

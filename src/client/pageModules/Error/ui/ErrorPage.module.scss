@@ -1,0 +1,19 @@
+.error {
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 50px;
+    right: 0;
+    bottom: 100px;
+    left: 0;
+    background: var(--color-white);
+    pointer-events: none;
+  }
+
+  &-image {
+    display: block;
+    max-width: 100%;
+    margin: 95px auto -55px;
+  }
+}

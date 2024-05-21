@@ -1,0 +1,12 @@
+.icon {
+  flex-shrink: 0;
+}
+
+.iconWL {
+  color: var(--color-Main100);
+}
+
+// important чтобы победить специфичность ДС
+.iconWrapperWL {
+  background-color: var(--color-Main06) !important;
+}

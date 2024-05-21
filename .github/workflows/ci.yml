@@ -1,0 +1,93 @@
+name: CI
+
+on: [push]
+
+env:
+  NODE_TLS_REJECT_UNAUTHORIZED: 0
+
+jobs:
+  build:
+    name: Build
+    runs-on: sravni_dev
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: https://npm.pkg.github.com/
+          scope: "@sravni"
+
+      - name: Install yarn
+        run: npm i yarn -g
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: yarn --frozen-lockfile
+
+      - name: Generate types
+        run: yarn updateApiTypes
+
+      - name: Lint
+        run: yarn lint
+        if: always()
+
+      - name: Compile
+        run: yarn ts
+        if: always()
+
+      - name: Storybook
+        run: yarn build:storybook
+        if: always()
+
+  lint-annotate:
+    name: Lint Annotate
+    runs-on: sravni_dev
+    if: github.ref != 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: https://npm.pkg.github.com/
+          scope: '@sravni'
+
+      - name: Install yarn
+        run: npm i yarn -g
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: yarn --frozen-lockfile
+
+      - name: Generate lint report
+        run: yarn lint:ci
+        continue-on-error: true
+
+      - name: Annotate Code Linting Results
+        uses: ataylorme/eslint-annotate-action@v2
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          report-json: 'eslint_report.json'

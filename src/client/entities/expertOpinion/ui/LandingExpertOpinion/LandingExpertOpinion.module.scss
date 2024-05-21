@@ -1,0 +1,36 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.container {
+  &:not(.mobile) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    padding: 32px;
+  }
+}
+
+.headContainer {
+  margin-bottom: 16px;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: 32px;
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  color: var(--color-D80);
+}
+
+.expertIcon {
+  margin-left: 6px;
+  border-radius: 50%;
+  background-color: var(--color-B100);
+
+  & svg > path {
+    color: var(--color-L100);
+  }
+}

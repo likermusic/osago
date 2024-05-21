@@ -1,0 +1,19 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.accordion {
+  max-width: 940px;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+}
+
+.loader {
+  height: 422px;
+}
+
+.loaderSkeleton {
+  width: 360px;
+}

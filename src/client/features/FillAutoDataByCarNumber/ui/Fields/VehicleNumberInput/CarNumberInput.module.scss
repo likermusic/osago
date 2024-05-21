@@ -1,0 +1,9 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.carNumberWidget {
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 283px;
+  }
+}

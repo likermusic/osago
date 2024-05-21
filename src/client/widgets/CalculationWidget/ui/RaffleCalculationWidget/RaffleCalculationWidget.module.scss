@@ -1,0 +1,19 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.calculationToggleCard {
+  display: block;
+  position: relative;
+  padding: 24px 16px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 24px;
+  }
+}
+
+.wrapper {
+  padding: 24px 0 32px;
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 48px 0;
+  }
+}

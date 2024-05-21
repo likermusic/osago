@@ -1,0 +1,8 @@
+@import '~@sravni/design-system-theme/lib/scss/core/variables';
+
+.acceptBtn {
+  min-width: 168px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    min-width: auto;
+  }
+}
